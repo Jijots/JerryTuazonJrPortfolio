@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project History - My Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <script src="./assets/js/script.js" defer></script>
+  <link rel="icon" href="./assets/img/portfolio.png" type="image/png" />
+</head>
+<body>
+
+  <!-- Introduction Section - Fullscreen Carousel -->
+  <section class="fullscreen-carousel-section" id="introduction" role="region" aria-roledescription="carousel" aria-label="Introduction carousel">
+    <div class="carousel-fade" id="introduction-carousel" tabindex="0">
+      <div class="carousel-slide active" data-index="0">
+        <figure>
+          <img class="carousel-image" src="./assets/img/keionRegistration.png" alt="Keion registration mockup" loading="lazy" />
+          <div class="carousel-overlay" role="group" aria-label="Intro overlay">
+            <h3>2020: Just for fun</h3>
+            <p>Just learning and creating anything with friends</p>
+          </div>
+          <figcaption class="carousel-caption">Keion Registration Mockup</figcaption>
+        </figure>
+      </div>
+      <div class="carousel-slide" data-index="1">
+        <figure>
+          <img class="carousel-image" src="./assets/img/keionInfo.png" alt="Keion info page design" loading="lazy" />
+          <figcaption class="carousel-caption">Keion Info Page Design</figcaption>
+        </figure>
+      </div>
+      <div class="carousel-slide" data-index="2">
+        <figure>
+          <img class="carousel-image" src="./assets/img/clannadSite.png" alt="Clannad themed site" loading="lazy" />
+          <figcaption class="carousel-caption">My first themed site inspired by Clannad</figcaption>
+        </figure>
+      </div>
+
+      <button class="carousel-btn prev" aria-controls="introduction-carousel" aria-label="Previous slide">&#10094;</button>
+      <button class="carousel-btn next" aria-controls="introduction-carousel" aria-label="Next slide">&#10095;</button>
+
+      <div class="visually-hidden" aria-live="polite" id="introduction-carousel-status">Slide 1 of 3: Keion Registration Mockup</div>
+    </div>
+    <a href="#intermediate-projects" class="section-btn">Next Step</a>
+  </section>
+
+  <!-- Intermediate Projects -->
+  <section id="intermediate-projects" class="section gray">
+    <h2>2nd Year, 2nd Term: Advanced Web Design</h2>
+    <p>I began integrating JavaScript, building even more dynamic websites, and understanding user experience.</p>
+    <img src="./assets/img/intermediate-project-image.webp" alt="Intermediate Project Screenshot" loading="lazy" />
+    <a href="#contact" class="section-btn">Reach Out</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section light">
+    <h2>Contact</h2>
+    <p>Let’s connect! Whether it’s for work, collaboration, or conversation — I’m just an email away.</p>
+    <a href="mailto:your-email@example.com" class="section-btn">Email Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Your Name | <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+</body>
+</html>

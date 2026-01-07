@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="icon" href="assets/img/portfolio.png" type="image/png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+  <!-- Navbar & Header -->
+  <header>
+    <nav id="navbar">
+      <ul>
+        <li class="about-text hover-target nav-fade">
+          <a href="javascript:void(0)" onclick="openAbout()">About</a>
+        </li>
+        <li class="contact-text hover-target nav-fade">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="projects-text hover-target nav-fade">
+          <a href="#projects">Projects</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section class="hero-section">
+    <div class="section-center">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <h1 class="typewriter">Welcome to My Portfolio.</h1>
+            <p id="name">Jose Jerry C. Tuazon Jr.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Slide Panel -->
+  <div class="slide-panel" id="aboutPanel">
+    <button class="close-btn" onclick="closeAbout()">×</button>
+    <div class="panel-content">
+      <div class="about-me-flex">
+        <div class="profile-pic">
+          <img id="profile-img" src="./assets/img/me.png" alt="Profile Picture" />
+        </div>
+        <div class="about-description">
+          <h2>About Me</h2>
+          <p>
+            I'm Jose Jerry C. Tuazon Jr., a 3rd year BSIT student at FEU Institute of Technology.
+            I have been interested in the web development field since 2020. I have experience in HTML, CSS, Javascript, and PHP using the Codeigniter 4 framework.
+            I am currently learning Laravel, Tailwind, React and Node.js to enhance my skills. I am passionate about creating user-friendly and responsive web applications.
+          </p>
+          <div id="project-history-btn">
+            <h3><a href="/pages/project-showcase/index.html" target="_blank">Project History</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 My Portfolio</p>
+  </footer>
+</body>
+</html>
