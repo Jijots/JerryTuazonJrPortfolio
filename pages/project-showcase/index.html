@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Project History of Jose Jerry Tuazon Jr. - A timeline of web development projects." />
   <title>Project History - My Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <script src="./assets/js/script.js" defer></script>
-  <link rel="icon" href="./assets/img/portfolio.png" type="image/png" />
+  <link rel="icon" href="./assets/img/favicon.png" type="image/png" />
 </head>
 <body>
 
@@ -19,102 +18,106 @@
       </a>
   </nav>
 
-  <section class="fullscreen-carousel-section" id="introduction" role="region" aria-roledescription="carousel" aria-label="Introduction carousel">
-    <div class="carousel-fade" id="introduction-carousel" tabindex="0">
-      <div class="carousel-slide active" data-index="0">
+  <section class="fullscreen-carousel-section" id="introduction">
+    <div class="carousel-fade" id="introduction-carousel">
+      <div class="carousel-slide active">
         <figure>
-          <img class="carousel-image" src="./assets/img/keionRegistration.png" alt="Keion registration mockup" loading="lazy" />
-          <div class="carousel-overlay" role="group" aria-label="Intro overlay">
+          <img class="carousel-image" src="./assets/img/keionRegistration.png" alt="Keion registration" />
+          <div class="carousel-overlay">
             <h3>2020: Just for fun</h3>
             <p>Just learning and creating anything with friends</p>
           </div>
           <figcaption class="carousel-caption">Keion Registration Mockup</figcaption>
         </figure>
       </div>
-      <div class="carousel-slide" data-index="1">
+      <div class="carousel-slide">
         <figure>
-          <img class="carousel-image" src="./assets/img/keionInfo.png" alt="Keion info page design" loading="lazy" />
+          <img class="carousel-image" src="./assets/img/keionInfo.png" alt="Keion info page" />
           <figcaption class="carousel-caption">Keion Info Page Design</figcaption>
         </figure>
       </div>
-      <div class="carousel-slide" data-index="2">
+      <div class="carousel-slide">
         <figure>
-          <img class="carousel-image" src="./assets/img/clannadSite.png" alt="Clannad themed site" loading="lazy" />
-          <figcaption class="carousel-caption">My first themed site inspired by Clannad</figcaption>
+          <img class="carousel-image" src="./assets/img/clannadSite.png" alt="Clannad site" />
+          <figcaption class="carousel-caption">First Themed Site (Clannad)</figcaption>
         </figure>
       </div>
 
-      <button class="carousel-btn prev" aria-controls="introduction-carousel" aria-label="Previous slide">&#10094;</button>
-      <button class="carousel-btn next" aria-controls="introduction-carousel" aria-label="Next slide">&#10095;</button>
-
-      <div class="visually-hidden" aria-live="polite" id="introduction-carousel-status">Slide 1 of 3: Keion Registration Mockup</div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
-    <a href="#intermediate-projects" class="section-btn">Next Step</a>
+    <a href="#intermediate-projects" class="section-btn" style="position: absolute; bottom: 30px; right: 30px; z-index: 50;">Next Step</a>
   </section>
 
-  <section class="fullscreen-carousel-section" id="intermediate-projects" role="region" aria-roledescription="carousel" aria-label="Intermediate Projects carousel">
-    <div class="carousel-fade" id="intermediate-carousel" tabindex="0">
+  <section class="fullscreen-carousel-section" id="intermediate-projects">
+    <div class="carousel-fade" id="intermediate-carousel">
       
-      <div class="carousel-slide active" data-index="0">
+      <div class="carousel-slide active">
         <figure>
-          <img class="carousel-image" src="./assets/img/pokemonLanding.png" alt="Pokemon Web Store Landing Page" loading="lazy" />
-          <div class="carousel-overlay" role="group" aria-label="Intermediate Project Overlay">
-            <h3>2nd Year, 2nd Term: Advanced Web Design</h3>
-            <p>I began integrating JavaScript, building even more dynamic websites, and understanding user experience.</p>
+          <img class="carousel-image" src="./assets/img/pokemonLanding.png" alt="Pokemon Landing" />
+          <div class="carousel-overlay">
+            <h3>2nd Year: Advanced Web Design</h3>
+            <p>Integrating JavaScript for dynamic user experiences.</p>
           </div>
           <figcaption class="carousel-caption">Pokémon GO Web Store - Landing Page</figcaption>
         </figure>
       </div>
 
-      <div class="carousel-slide" data-index="1">
+      <div class="carousel-slide">
         <figure>
-          <img class="carousel-image" src="./assets/img/pokeRegister.png" alt="Registration Page" loading="lazy" />
+          <img class="carousel-image" src="./assets/img/pokeRegister.png" alt="Registration" />
           <figcaption class="carousel-caption">User Registration Interface</figcaption>
         </figure>
       </div>
 
-      <div class="carousel-slide" data-index="2">
+      <div class="carousel-slide">
         <figure>
-          <img class="carousel-image" src="./assets/img/pokeStore.png" alt="Storefront" loading="lazy" />
+          <img class="carousel-image" src="./assets/img/pokeStore.png" alt="Storefront" />
           <figcaption class="carousel-caption">Dynamic Storefront</figcaption>
         </figure>
       </div>
 
-       <div class="carousel-slide" data-index="3">
+       <div class="carousel-slide">
         <figure>
-          <img class="carousel-image" src="./assets/img/pokePayment.png" alt="Payment Page" loading="lazy" />
+          <img class="carousel-image" src="./assets/img/pokePayment.png" alt="Payment" />
           <figcaption class="carousel-caption">Secure Payment Simulation</figcaption>
         </figure>
       </div>
 
-      <div class="carousel-slide" data-index="4">
-        <figure>
-          <img class="carousel-image" src="./assets/img/pokeHistory.png" alt="Order History" loading="lazy" />
-          <figcaption class="carousel-caption">User Dashboard & Order History</figcaption>
-        </figure>
-      </div>
-
-      <button class="carousel-btn prev" aria-controls="intermediate-carousel" aria-label="Previous slide">&#10094;</button>
-      <button class="carousel-btn next" aria-controls="intermediate-carousel" aria-label="Next slide">&#10095;</button>
-
-      <div class="visually-hidden" aria-live="polite" id="intermediate-carousel-status">Slide 1 of 5: Pokémon GO Web Store - Landing Page</div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
     
-    <a href="#contact" class="section-btn">Reach Out</a>
+    <button class="section-btn" id="trigger-contact-btn" style="position: absolute; bottom: 30px; right: 30px; z-index: 50;">Reach Out</button>
   </section>
 
-  <section id="contact" class="section light" style="position: relative; overflow: hidden; color: white;">
-    <div class="parallax-bg" style="background-image: url('./assets/img/portfolio.png'); opacity: 0.1;"></div>
-    
-    <div style="position: relative; z-index: 2; color: #333;">
-        <h2>Contact</h2>
-        <p>Let’s connect! Whether it’s for work, collaboration, or conversation — I’m just an email away.</p>
-        <a href="mailto:your-email@example.com" class="section-btn">Email Me</a>
+  <div class="slide-panel" id="contactPanel" aria-hidden="true">
+    <button class="close-btn" id="close-contact-btn" aria-label="Close Contact Panel">×</button>
+    <div class="panel-content compact-panel centered-content">
+        <h2>Contact Me</h2>
+        <p style="margin-bottom: 20px;">Let’s connect! Whether it’s for work, collaboration, or just a conversation.</p>
+        
+        <div style="margin: 0; font-size: 1.1rem; color: #4a5d75; text-align: left; display: inline-block;">
+            <p style="margin-bottom: 10px;">
+                <i class="fas fa-envelope" style="color: #2b4872; margin-right: 10px;"></i>
+                <strong>Email:</strong> josejerry26@gmail.com
+            </p>
+            <p style="margin-bottom: 5px;">
+                <i class="fas fa-mobile-alt" style="color: #2b4872; margin-right: 14px;"></i>
+                <strong>Smart:</strong> 0961 502 0892
+            </p>
+            <p style="margin-bottom: 0;">
+                <i class="fas fa-mobile-alt" style="color: #2b4872; margin-right: 14px;"></i>
+                <strong>Globe:</strong> 0917 119 3597
+            </p>
+        </div>
+        <br>
+        <a href="mailto:josejerry26@gmail.com" class="email-btn">Send Message</a>
     </div>
-  </section>
+  </div>
 
   <footer>
-    <p>© 2025 Jose Jerry Tuazon Jr. | <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></p>
+    <p>© 2025 Jose Jerry Tuazon Jr. | <a href="https://github.com/jijots" target="_blank" rel="noopener">GitHub</a></p>
   </footer>
 
 </body>

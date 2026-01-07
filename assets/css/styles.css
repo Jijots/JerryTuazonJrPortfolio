@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
 * {
     padding: 0;
     margin: 0;
@@ -33,7 +36,9 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Header */
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
 header {
     position: absolute;
     top: 5px;
@@ -44,7 +49,6 @@ header {
     z-index: 1000;
 }
 
-/* Navbar */
 #navbar ul {
     list-style-type: none;
     text-align: center;
@@ -79,11 +83,14 @@ header {
     }
 }
 
-#navbar a:hover, #navbar button:hover {
+#navbar a:hover, 
+#navbar button:hover {
     color: #de3a31;
 }
 
-/* Hero Section */
+/* =========================================
+   HERO SECTION
+   ========================================= */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -100,7 +107,7 @@ header {
     border-right: 4px solid #faf6dd;
     width: 0;
     animation: typing 2.5s steps(30) 1s forwards, blink 0.75s step-end infinite;
-    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
+    font-size: clamp(1.5rem, 5vw, 2.5rem); 
     margin-bottom: 15px;
 }
 
@@ -128,80 +135,93 @@ header {
     font-size: 1.3rem;
     animation: fadeSlideLeft 1s ease-out 4s forwards;
     opacity: 0;
-    /* Removed fixed margin for better centering */
 }
 
-/* Slide-In Panel */
+/* =========================================
+   GLASS PANELS (Shared)
+   ========================================= */
+
 .slide-panel {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(250, 246, 221, 0.95);
-    backdrop-filter: blur(10px);
-    color: #2b4872;
-    transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    background: rgba(24, 46, 73, 0.6); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 2000;
-    padding: 40px;
-    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden; 
+    transition: all 0.4s ease;
 }
 
 .slide-panel.active {
-    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.panel-content {
+    background: #faf6dd; 
+    padding: 50px; /* Default large padding for About Me */
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    transform: translateY(30px); 
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+/* WHITESPACE FIX: Compact class for text-only panels */
+.panel-content.compact-panel {
+    padding: 30px 20px; /* Much smaller padding */
+    max-width: 550px;
+}
+
+.slide-panel.active .panel-content {
+    transform: translateY(0);
 }
 
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 3rem;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
     line-height: 1;
     background: none;
     border: none;
     color: #2b4872;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
+    z-index: 10;
 }
 
 .close-btn:hover {
     color: #de3a31;
+    transform: scale(1.1) rotate(90deg);
 }
 
-.panel-content {
-    max-width: 900px;
-    margin: 60px auto 0;
-    animation: slideFadeIn 0.5s ease-out 0.3s both; /* Added delay so it animates AFTER panel slides */
-}
-
-@keyframes slideFadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
+/* === About Panel Specifics === */
 .about-me-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 50px;
+    text-align: left;
 }
 
 .profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    /* Removed rigid negative margin */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 5px solid #2b4872;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 #profile-img {
@@ -210,66 +230,93 @@ header {
     object-fit: cover;
 }
 
-.about-description h2 {
-    font-size: 2.3rem;
-    margin-bottom: 20px;
-}
-
 .about-description {
     flex: 1;
-    min-width: 300px;
+    color: #2b4872;
+}
+
+.about-description h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.about-description p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #182e49;
+    line-height: 1.8;
+    color: #4a5d75;
+    margin-bottom: 30px;
 }
 
 #project-history-btn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 10px 25px;
-    border-radius: 32px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2b4872;
-    transition: all 0.35s ease;
+    padding: 0;
+    border-radius: 50px;
+    background: #2b4872;
+    border: none;
+    box-shadow: 0 4px 15px rgba(43, 72, 114, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    border: 2px solid #2b4872;
 }
 
 #project-history-btn a {
-    text-decoration: none;
-    color: inherit;
     display: block;
-    position: relative;
-    z-index: 1;
+    padding: 12px 35px;
+    color: #faf6dd;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
 }
 
-#project-history-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #4e78a0; 
-    border-radius: inherit; 
-    transform: scale(0);
-    transition: transform 0.35s ease;
-    z-index: -1;
-}
-
-#project-history-btn:hover::before {
-    transform: scale(1.6); 
-}
-
 #project-history-btn:hover {
-    color: #faf6dd;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-    border-color: #4e78a0;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(43, 72, 114, 0.5);
+    background: #1e3655;
 }
 
-/* Footer */
+/* === Contact & Projects Panel Specifics === */
+.centered-content {
+    text-align: center;
+}
+
+.centered-content h2 {
+    font-size: 2.2rem;
+    color: #2b4872;
+    margin-bottom: 10px; /* Reduced margin */
+    text-transform: uppercase;
+}
+
+.centered-content p {
+    font-size: 1.1rem;
+    color: #4a5d75;
+    margin-bottom: 15px; /* Reduced margin */
+    line-height: 1.5;
+}
+
+.email-btn {
+    display: inline-block;
+    margin-top: 15px; /* Reduced margin */
+    padding: 12px 30px;
+    border-radius: 32px;
+    background-color: #2b4872;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.email-btn:hover {
+    background-color: #1e3350;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 footer {
     position: absolute;
     bottom: 0;
@@ -296,39 +343,37 @@ footer {
 }
 
 /* =========================================
-   RESPONSIVE DESIGN (MOBILE FIXES)
+   RESPONSIVE DESIGN (MOBILE)
    ========================================= */
 @media (max-width: 900px) {
+    .panel-content {
+        padding: 30px 20px;
+        max-height: 90vh; 
+        overflow-y: auto; 
+    }
+
     .about-me-flex {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
 
     .profile-pic {
-        width: 250px;
-        height: 250px;
-        margin: 0 auto 20px;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
     }
 
-    .about-description {
-        width: 100%;
-        text-align: center;
-    }
-    
-    #project-history-btn {
-        right: 0; /* Reset previous absolute positioning if any */
+    .about-description h2, .centered-content h2 {
+        font-size: 2rem;
     }
 
     .typewriter {
-        white-space: normal; /* Allow wrap on very small screens */
+        white-space: normal; 
         border-right: none;
         animation: none;
         width: 100%;
         opacity: 0;
         animation: fadeInNav 1s ease forwards 1s;
-    }
-
-    #name {
-        margin-right: 0;
     }
 }

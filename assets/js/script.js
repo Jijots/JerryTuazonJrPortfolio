@@ -1,25 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const aboutBtn = document.getElementById('about-btn');
-    const closeAboutBtn = document.getElementById('close-about-btn');
-    const aboutPanel = document.getElementById('aboutPanel');
+    // === Panel Selectors ===
+    const panels = {
+        about: {
+            btn: document.getElementById('about-btn'),
+            close: document.getElementById('close-about-btn'),
+            panel: document.getElementById('aboutPanel')
+        },
+        contact: {
+            btn: document.getElementById('contact-btn'),
+            close: document.getElementById('close-contact-btn'),
+            panel: document.getElementById('contactPanel')
+        },
+        projects: {
+            btn: document.getElementById('projects-btn'),
+            close: document.getElementById('close-projects-btn'),
+            panel: document.getElementById('projectsPanel')
+        }
+    };
 
-    function openAbout() {
-        aboutPanel.classList.add('active');
-        aboutPanel.setAttribute('aria-hidden', 'false');
+    // === Helpers ===
+    function openPanel(targetPanel) {
+        // Close all first
+        Object.values(panels).forEach(p => {
+            if(p.panel) {
+                p.panel.classList.remove('active');
+                p.panel.setAttribute('aria-hidden', 'true');
+            }
+        });
+        
+        // Open target
+        if (targetPanel) {
+            targetPanel.classList.add('active');
+            targetPanel.setAttribute('aria-hidden', 'false');
+        }
     }
 
-    function closeAbout() {
-        aboutPanel.classList.remove('active');
-        aboutPanel.setAttribute('aria-hidden', 'true');
+    function closePanel(targetPanel) {
+        if (targetPanel) {
+            targetPanel.classList.remove('active');
+            targetPanel.setAttribute('aria-hidden', 'true');
+        }
     }
 
-    if (aboutBtn) aboutBtn.addEventListener('click', openAbout);
-    if (closeAboutBtn) closeAboutBtn.addEventListener('click', closeAbout);
+    // === Event Binding ===
+    Object.values(panels).forEach(p => {
+        if(p.btn) p.btn.addEventListener('click', () => openPanel(p.panel));
+        if(p.close) p.close.addEventListener('click', () => closePanel(p.panel));
+        
+        // Click outside to close
+        if(p.panel) {
+            p.panel.addEventListener('click', (e) => {
+                if (e.target === p.panel) closePanel(p.panel);
+            });
+        }
+    });
 
-    // Close on Escape key
+    // === Global Escape Key ===
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && aboutPanel.classList.contains('active')) {
-            closeAbout();
+        if (e.key === 'Escape') {
+            const active = document.querySelector('.slide-panel.active');
+            if (active) {
+                active.classList.remove('active');
+                active.setAttribute('aria-hidden', 'true');
+            }
         }
     });
 });
