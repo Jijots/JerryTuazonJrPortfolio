@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project History of Jose Jerry Tuazon Jr. - A timeline of web development projects." />
   <title>Project History - My Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
@@ -12,7 +13,12 @@
 </head>
 <body>
 
-  <!-- Introduction Section - Fullscreen Carousel -->
+  <nav class="showcase-nav">
+      <a href="../../index.html" class="home-btn" aria-label="Back to Home">
+          <i class="fas fa-home"></i> Home
+      </a>
+  </nav>
+
   <section class="fullscreen-carousel-section" id="introduction" role="region" aria-roledescription="carousel" aria-label="Introduction carousel">
     <div class="carousel-fade" id="introduction-carousel" tabindex="0">
       <div class="carousel-slide active" data-index="0">
@@ -46,8 +52,7 @@
     <a href="#intermediate-projects" class="section-btn">Next Step</a>
   </section>
 
-  <!-- Intermediate Projects -->
- <section class="fullscreen-carousel-section" id="intermediate-projects" role="region" aria-roledescription="carousel" aria-label="Intermediate Projects carousel">
+  <section class="fullscreen-carousel-section" id="intermediate-projects" role="region" aria-roledescription="carousel" aria-label="Intermediate Projects carousel">
     <div class="carousel-fade" id="intermediate-carousel" tabindex="0">
       
       <div class="carousel-slide active" data-index="0">
@@ -98,16 +103,18 @@
     <a href="#contact" class="section-btn">Reach Out</a>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section light">
-    <h2>Contact</h2>
-    <p>Let’s connect! Whether it’s for work, collaboration, or conversation — I’m just an email away.</p>
-    <a href="mailto:your-email@example.com" class="section-btn">Email Me</a>
+  <section id="contact" class="section light" style="position: relative; overflow: hidden; color: white;">
+    <div class="parallax-bg" style="background-image: url('./assets/img/portfolio.png'); opacity: 0.1;"></div>
+    
+    <div style="position: relative; z-index: 2; color: #333;">
+        <h2>Contact</h2>
+        <p>Let’s connect! Whether it’s for work, collaboration, or conversation — I’m just an email away.</p>
+        <a href="mailto:your-email@example.com" class="section-btn">Email Me</a>
+    </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Your Name | <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></p>
+    <p>© 2025 Jose Jerry Tuazon Jr. | <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></p>
   </footer>
 
 </body>

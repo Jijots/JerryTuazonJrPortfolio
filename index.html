@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <meta name="description" content="Portfolio of Jose Jerry C. Tuazon Jr., a Web Developer specializing in HTML, CSS, JavaScript, and PHP." />
+  <title>Jose Jerry Tuazon Jr. | Portfolio</title>
   <link rel="icon" href="assets/img/portfolio.png" type="image/png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar & Header -->
   <header>
     <nav id="navbar">
       <ul>
         <li class="about-text hover-target nav-fade">
-          <a href="javascript:void(0)" onclick="openAbout()">About</a>
+          <button id="about-btn" class="nav-link">About</button>
         </li>
         <li class="contact-text hover-target nav-fade">
-          <a href="#contact">Contact</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </li>
         <li class="projects-text hover-target nav-fade">
-          <a href="#projects">Projects</a>
+          <a href="./pages/project-showcase/index.html" class="nav-link">Projects</a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <section class="hero-section">
     <div class="section-center">
       <div class="container-fluid">
@@ -40,13 +39,12 @@
     </div>
   </section>
 
-  <!-- About Slide Panel -->
-  <div class="slide-panel" id="aboutPanel">
-    <button class="close-btn" onclick="closeAbout()">×</button>
+  <div class="slide-panel" id="aboutPanel" aria-hidden="true">
+    <button class="close-btn" id="close-about-btn" aria-label="Close About Panel">×</button>
     <div class="panel-content">
       <div class="about-me-flex">
         <div class="profile-pic">
-          <img id="profile-img" src="./assets/img/me.png" alt="Profile Picture" />
+          <img id="profile-img" src="./assets/img/me.png" alt="Jose Jerry C. Tuazon Jr." />
         </div>
         <div class="about-description">
           <h2>About Me</h2>
@@ -56,16 +54,15 @@
             I am currently learning Laravel, Tailwind, React and Node.js to enhance my skills. I am passionate about creating user-friendly and responsive web applications.
           </p>
           <div id="project-history-btn">
-            <h3><a href="./pages/project-showcase/index.html" target="_blank">Project History</a></h3>
+            <h3><a href="./pages/project-showcase/index.html">Project History</a></h3>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2023 My Portfolio</p>
+  <footer id="contact">
+    <p>&copy; 2025 Jose Jerry C. Tuazon Jr.</p>
   </footer>
 </body>
 </html>
