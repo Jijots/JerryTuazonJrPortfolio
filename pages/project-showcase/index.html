@@ -47,10 +47,54 @@
   </section>
 
   <!-- Intermediate Projects -->
-  <section id="intermediate-projects" class="section gray">
-    <h2>2nd Year, 2nd Term: Advanced Web Design</h2>
-    <p>I began integrating JavaScript, building even more dynamic websites, and understanding user experience.</p>
-    <img src="./assets/img/intermediate-project-image.webp" alt="Intermediate Project Screenshot" loading="lazy" />
+ <section class="fullscreen-carousel-section" id="intermediate-projects" role="region" aria-roledescription="carousel" aria-label="Intermediate Projects carousel">
+    <div class="carousel-fade" id="intermediate-carousel" tabindex="0">
+      
+      <div class="carousel-slide active" data-index="0">
+        <figure>
+          <img class="carousel-image" src="./assets/img/pokemonLanding.png" alt="Pokemon Web Store Landing Page" loading="lazy" />
+          <div class="carousel-overlay" role="group" aria-label="Intermediate Project Overlay">
+            <h3>2nd Year, 2nd Term: Advanced Web Design</h3>
+            <p>I began integrating JavaScript, building even more dynamic websites, and understanding user experience.</p>
+          </div>
+          <figcaption class="carousel-caption">Pokémon GO Web Store - Landing Page</figcaption>
+        </figure>
+      </div>
+
+      <div class="carousel-slide" data-index="1">
+        <figure>
+          <img class="carousel-image" src="./assets/img/pokeRegister.png" alt="Registration Page" loading="lazy" />
+          <figcaption class="carousel-caption">User Registration Interface</figcaption>
+        </figure>
+      </div>
+
+      <div class="carousel-slide" data-index="2">
+        <figure>
+          <img class="carousel-image" src="./assets/img/pokeStore.png" alt="Storefront" loading="lazy" />
+          <figcaption class="carousel-caption">Dynamic Storefront</figcaption>
+        </figure>
+      </div>
+
+       <div class="carousel-slide" data-index="3">
+        <figure>
+          <img class="carousel-image" src="./assets/img/pokePayment.png" alt="Payment Page" loading="lazy" />
+          <figcaption class="carousel-caption">Secure Payment Simulation</figcaption>
+        </figure>
+      </div>
+
+      <div class="carousel-slide" data-index="4">
+        <figure>
+          <img class="carousel-image" src="./assets/img/pokeHistory.png" alt="Order History" loading="lazy" />
+          <figcaption class="carousel-caption">User Dashboard & Order History</figcaption>
+        </figure>
+      </div>
+
+      <button class="carousel-btn prev" aria-controls="intermediate-carousel" aria-label="Previous slide">&#10094;</button>
+      <button class="carousel-btn next" aria-controls="intermediate-carousel" aria-label="Next slide">&#10095;</button>
+
+      <div class="visually-hidden" aria-live="polite" id="intermediate-carousel-status">Slide 1 of 5: Pokémon GO Web Store - Landing Page</div>
+    </div>
+    
     <a href="#contact" class="section-btn">Reach Out</a>
   </section>
 
