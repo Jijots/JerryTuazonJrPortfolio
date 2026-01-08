@@ -7,7 +7,7 @@ body {
 
 html, body { overflow-x: hidden; }
 
-/* Global Section Styles */
+/* Sections */
 .section {
   padding: 100px 20px;
   text-align: center;
@@ -33,7 +33,7 @@ html, body { overflow-x: hidden; }
   transform: translateY(-2px);
 }
 
-/* ===== Fullscreen Carousel Styles ===== */
+/* Fullscreen Carousel */
 .fullscreen-carousel-section {
   position: relative;
   height: 100vh;
@@ -81,7 +81,7 @@ html, body { overflow-x: hidden; }
     display: block;
 }
 
-/* Dark gradient overlay */
+/* Overlay Gradient */
 .carousel-slide figure::after {
     content: '';
     position: absolute;
@@ -121,7 +121,7 @@ html, body { overflow-x: hidden; }
 .carousel-overlay h3 { font-size: 3rem; margin-bottom: 10px; }
 .carousel-overlay p { font-size: 1.2rem; }
 
-/* Carousel Controls */
+/* Controls */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -141,7 +141,7 @@ html, body { overflow-x: hidden; }
 .carousel-btn.prev { left: 20px; }
 .carousel-btn.next { right: 20px; }
 
-/* ===== Nav Home Button ===== */
+/* Home Button */
 .showcase-nav {
     position: fixed;
     top: 20px;
@@ -169,32 +169,7 @@ html, body { overflow-x: hidden; }
     transform: translateY(-2px);
 }
 
-/* =========================================
-   CONTACT POP-UP (GLASS STYLE)
-   ========================================= */
-
-/* The Backdrop */
-/* ... [Keep all your carousel and global styles from before] ... */
-
-/* =========================================
-   CONTACT POP-UP (GLASS STYLE) - WHITESPACE FIXED
-   ========================================= */
-
-/* The Backdrop */
-/* ... [Keep all your carousel and global styles] ... */
-
-/* =========================================
-   CONTACT POP-UP (COMPACT FIX)
-   ========================================= */
-
-/* The Backdrop */
-/* ... [Keep all your carousel and global styles] ... */
-
-/* =========================================
-   CONTACT POP-UP (MATCHING LANDING PAGE)
-   ========================================= */
-
-/* The Backdrop */
+/* Contact Pop-up Styles */
 .slide-panel {
     position: fixed;
     top: 0;
@@ -218,7 +193,6 @@ html, body { overflow-x: hidden; }
     visibility: visible;
 }
 
-/* The Card Wrapper */
 .panel-content {
     background: #faf6dd; 
     padding: 50px;
@@ -231,7 +205,6 @@ html, body { overflow-x: hidden; }
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* WHITESPACE FIX: Compact class (Copied from Landing Page) */
 .panel-content.compact-panel {
     padding: 30px 20px;
     max-width: 550px;
@@ -241,7 +214,6 @@ html, body { overflow-x: hidden; }
     transform: translateY(0);
 }
 
-/* Centered Content Helpers */
 .centered-content {
     text-align: center;
 }
@@ -253,7 +225,6 @@ html, body { overflow-x: hidden; }
     text-transform: uppercase;
 }
 
-/* Email Button Style (Copied from Landing Page) */
 .email-btn {
     display: inline-block;
     margin-top: 15px;
@@ -265,7 +236,7 @@ html, body { overflow-x: hidden; }
     text-decoration: none;
     transition: background 0.3s ease, transform 0.2s ease;
     cursor: pointer;
-    border: none; /* Reset border if any */
+    border: none;
 }
 
 .email-btn:hover {
@@ -273,7 +244,6 @@ html, body { overflow-x: hidden; }
     transform: translateY(-2px);
 }
 
-/* Close Button */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -292,9 +262,7 @@ html, body { overflow-x: hidden; }
     transform: scale(1.1) rotate(90deg);
 }
 
-/* ... [Keep footer and other existing styles] ... */
-
-/* Footer (Hidden mostly, but good for SEO) */
+/* Footer */
 footer {
     position: fixed;
     bottom: 0;
@@ -304,7 +272,7 @@ footer {
     color: rgba(255,255,255,0.5);
     font-size: 0.8rem;
     z-index: 100;
-    pointer-events: none; /* Let clicks pass through to carousel */
+    pointer-events: none;
 }
 
 footer a {

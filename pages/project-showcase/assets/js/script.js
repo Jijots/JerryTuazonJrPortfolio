@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. CAROUSEL LOGIC
+  
+  // Carousel Logic
   function initCarousels(){
     document.querySelectorAll('.carousel-fade').forEach(container => {
       const slides = Array.from(container.querySelectorAll('.carousel-slide'));
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       function show(index){
         const total = slides.length;
         index = ((index % total) + total) % total;
+        
         slides.forEach((s, i) => {
           const active = i === index;
           s.classList.toggle('active', active);
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if(prevBtn) prevBtn.addEventListener('click', ()=> show(current-1));
       if(nextBtn) nextBtn.addEventListener('click', ()=> show(current+1));
 
+      // Arrow Key Support
       container.addEventListener('keydown', (e) => {
         if(e.key === 'ArrowLeft') { e.preventDefault(); show(current-1); }
         if(e.key === 'ArrowRight') { e.preventDefault(); show(current+1); }
@@ -30,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   initCarousels();
 
-  // 2. SMOOTH SCROLL FOR ANCHOR LINKS
+  // Smooth Scrolling
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -41,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 3. CONTACT POP-UP LOGIC
+  // Contact Pop-up Logic
   const contactBtn = document.getElementById('trigger-contact-btn');
   const closeContactBtn = document.getElementById('close-contact-btn');
   const contactPanel = document.getElementById('contactPanel');
@@ -63,14 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if(contactBtn) contactBtn.addEventListener('click', openContact);
   if(closeContactBtn) closeContactBtn.addEventListener('click', closeContact);
 
-  // Close on Escape key
+  // Close on Escape Key
   document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && contactPanel && contactPanel.classList.contains('active')) {
           closeContact();
       }
   });
 
-  // Close if clicking outside the card
+  // Close on Background Click
   if (contactPanel) {
       contactPanel.addEventListener('click', (e) => {
           if (e.target === contactPanel) {

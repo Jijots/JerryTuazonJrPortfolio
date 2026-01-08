@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // === Panel Selectors ===
+    
+    // Panel Elements
     const panels = {
         about: {
             btn: document.getElementById('about-btn'),
@@ -18,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // === Helpers ===
+    // Open Panel Logic
     function openPanel(targetPanel) {
-        // Close all first
+        // Close others first
         Object.values(panels).forEach(p => {
             if(p.panel) {
                 p.panel.classList.remove('active');
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Close Panel Logic
     function closePanel(targetPanel) {
         if (targetPanel) {
             targetPanel.classList.remove('active');
@@ -42,12 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // === Event Binding ===
+    // Event Listeners
     Object.values(panels).forEach(p => {
         if(p.btn) p.btn.addEventListener('click', () => openPanel(p.panel));
         if(p.close) p.close.addEventListener('click', () => closePanel(p.panel));
         
-        // Click outside to close
+        // Close on background click
         if(p.panel) {
             p.panel.addEventListener('click', (e) => {
                 if (e.target === p.panel) closePanel(p.panel);
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === Global Escape Key ===
+    // Escape Key Support
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             const active = document.querySelector('.slide-panel.active');
